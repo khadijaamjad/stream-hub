@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using StreamHub.Data;
 
@@ -11,9 +12,11 @@ using StreamHub.Data;
 namespace StreamHub.Migrations
 {
     [DbContext(typeof(StreamHubContext))]
-    partial class StreamHubContextModelSnapshot : ModelSnapshot
+    [Migration("20240301114539_Rating")]
+    partial class Rating
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
